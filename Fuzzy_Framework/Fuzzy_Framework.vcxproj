@@ -68,6 +68,7 @@
     <ClInclude Include="core\ValueModel.h" />
     <ClInclude Include="fuzzy\And.h" />
     <ClInclude Include="fuzzy\AndMin.h" />
+    <ClInclude Include="fuzzy\AndMult.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
