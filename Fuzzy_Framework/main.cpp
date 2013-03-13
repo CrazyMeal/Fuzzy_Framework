@@ -3,6 +3,7 @@
 #include "fuzzy\AndMult.h"
 #include "fuzzy\OrPlus.h"
 #include "fuzzy\OrMax.h"
+#include "fuzzy\ThenMin.h"
 
 #include <iostream>
 
@@ -12,6 +13,7 @@ void main(){
 	fuzzy::AndMult<int> opMult;
 	fuzzy::OrPlus<int> opOrPlus;
 	fuzzy::OrMax<int> opOrMax;
+	fuzzy::ThenMin<int> opThenMin;
 
 	core::ValueModel<int> v1(8);
 	core::ValueModel<int> v2(4);
@@ -23,6 +25,7 @@ void main(){
 	std::cout << "AndMult: " << opMult.evaluate(&v1, &v2) << std::endl;
 	std::cout << "OrPlus: " << opOrPlus.evaluate(&v1, &v2) << std::endl;
 	std::cout << "OrMax: " << opOrMax.evaluate(&v1, &v2) << std::endl;
+	std::cout << "ThenMin: " << opThenMin.evaluate(&v1, &v2) << std::endl;
 	
 	std::cin.ignore();
 

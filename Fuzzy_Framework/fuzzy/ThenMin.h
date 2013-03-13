@@ -7,7 +7,7 @@
 namespace fuzzy
 {
 	template <class T>
-	class Then : public Or<T>
+	class ThenMin : public Then<T>
 	{
 	public:
 		virtual T evaluate(core::Expression<T>*, core::Expression<T>*) const;
