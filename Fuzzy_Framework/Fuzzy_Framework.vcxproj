@@ -69,6 +69,8 @@
     <ClInclude Include="fuzzy\And.h" />
     <ClInclude Include="fuzzy\AndMin.h" />
     <ClInclude Include="fuzzy\AndMult.h" />
+    <ClInclude Include="fuzzy\Or.h" />
+    <ClInclude Include="fuzzy\OrPlus.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

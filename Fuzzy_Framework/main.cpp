@@ -1,12 +1,16 @@
 #include "core\ValueModel.h"
 #include "fuzzy\AndMin.h"
 #include "fuzzy\AndMult.h"
+#include "fuzzy\OrPlus.h"
+
 #include <iostream>
 
 void main(){
 
 	fuzzy::AndMin<int> opMin;
 	fuzzy::AndMult<int> opMult;
+	fuzzy::OrPlus<int> opOrPlus;
+
 	core::ValueModel<int> v1(8);
 	core::ValueModel<int> v2(4);
 
@@ -15,6 +19,8 @@ void main(){
 
 	std::cout << "AndMin: " << opMin.evaluate(&v1, &v2) << std::endl;
 	std::cout << "AndMult: " << opMult.evaluate(&v1, &v2) << std::endl;
+	std::cout << "OrPlus: " << opOrPlus.evaluate(&v1, &v2) << std::endl;
+	
 	std::cin.ignore();
 
 }
