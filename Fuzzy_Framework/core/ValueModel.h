@@ -1,6 +1,8 @@
 #ifndef VALUEMODEL_H
 #define VALUEMODEL_H
 
+#include "Expression.h"
+
 namespace core
 {
 	template <class T>
@@ -11,7 +13,7 @@ namespace core
 		ValueModel(const T&);
 
 		virtual T evaluate() const;
-		virtual void setValue(T) const;
+		void setValue(const T&);
 
 	private:
 		T value;
@@ -28,7 +30,7 @@ namespace core
 	}
 
 	template <class T>
-	void ValueModel<T>::setValue(T _value) const
+	void ValueModel<T>::setValue(const T& _value)
 	{
 		value = _value;
 	}

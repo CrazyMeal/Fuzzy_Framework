@@ -8,7 +8,7 @@ namespace core
 	{
 	public:
 		virtual T evaluate() const=0;
-	}
+	};
 }
 
 #endif
