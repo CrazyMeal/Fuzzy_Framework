@@ -66,6 +66,7 @@
     <ClInclude Include="core\UnaryExpression.h" />
     <ClInclude Include="core\UnaryExpressionModel.h" />
     <ClInclude Include="core\ValueModel.h" />
+    <ClInclude Include="fuzzy\And.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

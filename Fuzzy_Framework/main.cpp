@@ -7,6 +7,6 @@ void main(){
 
 	std::cout << v1.evaluate() << std::endl;
 
-	system("pause");
+	std::cin.ignore();
 
 }
