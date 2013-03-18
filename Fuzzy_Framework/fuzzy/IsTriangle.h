@@ -2,11 +2,13 @@
 #define ISTRIANGLE_H
 
 #include "Is.h"
+#include "../core/Expression.h"
+#include "../core/UnaryExpression.h"
 
 namespace fuzzy
 {
 	template <class T>
-	class IsTriangle : public UnaryExpression<T>
+	class IsTriangle : public Is<T>
 	{
 	public:
 		IsTriangle(T, T, T);
@@ -22,9 +24,18 @@ namespace fuzzy
 	}
 
 	template <class T>
-	T IsTriangle<T>::evaluate(core::Expression<T> o)
+	T IsTriangle<T>::evaluate(core::Expression<T>* o) const
 	{
+		T value = o->evaluate();
 
+		if(value > min && value < mid)
+			return (value - min) / (mid - min);
+		if (value == mid)
+			return 1;
+		if(value > mid && value < max)
+			return (max - value) / (max - mid);
+		
+		return 0;
 	}
 }
 #endif

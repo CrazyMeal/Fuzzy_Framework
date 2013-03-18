@@ -1,7 +1,7 @@
 #ifndef IS_H
 #define IS_H
 
-#include "../core/Expression.h"
+#include "../core/UnaryExpression.h"
 
 namespace fuzzy
 {
