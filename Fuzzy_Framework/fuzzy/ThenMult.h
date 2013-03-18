@@ -14,7 +14,7 @@ namespace fuzzy
 	};
 
 	template <class T>
-	T ThenMin<T>::evaluate(core::Expression<T>* _left, core::Expression<T>* _right) const
+	T ThenMult<T>::evaluate(core::Expression<T>* _left, core::Expression<T>* _right) const
 	{
 		T left = _left->evaluate();
 		T right = _right->evaluate();

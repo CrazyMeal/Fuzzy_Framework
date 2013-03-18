@@ -74,6 +74,7 @@
     <ClInclude Include="fuzzy\OrPlus.h" />
     <ClInclude Include="fuzzy\Then.h" />
     <ClInclude Include="fuzzy\ThenMin.h" />
+    <ClInclude Include="fuzzy\ThenMult.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
