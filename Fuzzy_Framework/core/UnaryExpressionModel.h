@@ -7,12 +7,18 @@ namespace core
 	class UnaryExpressionModel : Expression<T>, UnaryExpression<T>
 	{
 	public:
+		UnaryExpressionModel(UnaryExpression<T>*, Expression<T>*);
 		virtual T evaluate() const;
 		virtual T evaluate(Expression<T>*) const;
 	private:
 		Expression<T>* operand;
 		UnaryExpression<T>* ope;
 	};
+
+	template <class T>
+	UnaryExpressionModel<T>::UnaryExpressionModel(UnaryExpression<T>* _ope, Expression<T>* _operand): ope(_ope), operand(_operand)
+	{
+	}
 
 	template <class T>
 	T UnaryExpressionModel<T>::evaluate()
