@@ -6,7 +6,7 @@
 #include "fuzzy\ThenMin.h"
 #include "fuzzy\ThenMult.h"
 #include "fuzzy\AggMax.h"
-
+#include "fuzzy\AggPlus.h"
 #include <iostream>
 
 void main(){
@@ -18,6 +18,7 @@ void main(){
 	fuzzy::ThenMin<int> opThenMin;
 	fuzzy::ThenMult<int> opThenMult;
 	fuzzy::AggMax<int> opAggMax;
+	fuzzy::AggPlus<int> opAggPlus;
 
 	core::ValueModel<int> v1(8);
 	core::ValueModel<int> v2(4);
@@ -32,7 +33,8 @@ void main(){
 	std::cout << "ThenMin: " << opThenMin.evaluate(&v1, &v2) << std::endl;
 	std::cout << "ThenMult: " << opThenMult.evaluate(&v1, &v2) << std::endl;
 	std::cout << "AggMax: " << opAggMax.evaluate(&v1, &v2) << std::endl;
-	
+	std::cout << "AggPlus: " << opAggPlus.evaluate(&v1, &v2) << std::endl;
+
 	std::cin.ignore();
 
 }
