@@ -13,8 +13,8 @@ namespace fuzzy
 	template <class T>
 	T AggMax<T>::evaluate(core::Expression<T>* _left, core::Expression<T>* _right) const
 	{
-		T left = _left->Evaluate();
-		T right = _right->Evaluate();
+		T left = _left->evaluate();
+		T right = _right->evaluate();
 		return (left>=right)? left : right;
 	}
 }
