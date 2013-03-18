@@ -7,21 +7,24 @@
 #include "fuzzy\ThenMult.h"
 #include "fuzzy\AggMax.h"
 #include "fuzzy\AggPlus.h"
+#include "fuzzy\NotMinus1.h"
+
 #include <iostream>
 
 void main(){
 
-	fuzzy::AndMin<int> opMin;
-	fuzzy::AndMult<int> opMult;
-	fuzzy::OrPlus<int> opOrPlus;
-	fuzzy::OrMax<int> opOrMax;
-	fuzzy::ThenMin<int> opThenMin;
-	fuzzy::ThenMult<int> opThenMult;
-	fuzzy::AggMax<int> opAggMax;
-	fuzzy::AggPlus<int> opAggPlus;
+	fuzzy::AndMin<float> opMin;
+	fuzzy::AndMult<float> opMult;
+	fuzzy::OrPlus<float> opOrPlus;
+	fuzzy::OrMax<float> opOrMax;
+	fuzzy::ThenMin<float> opThenMin;
+	fuzzy::ThenMult<float> opThenMult;
+	fuzzy::AggMax<float> opAggMax;
+	fuzzy::AggPlus<float> opAggPlus;
+	fuzzy::NotMinus1<float> opNotMinus1;
 
-	core::ValueModel<int> v1(8);
-	core::ValueModel<int> v2(4);
+	core::ValueModel<float> v1(8);
+	core::ValueModel<float> v2(4);
 
 	std::cout << "premiere valeur: " << v1.evaluate() << std::endl;
 	std::cout << "deuxieme valeur: " << v2.evaluate() << std::endl << std::endl;
@@ -33,7 +36,9 @@ void main(){
 	std::cout << "ThenMin: " << opThenMin.evaluate(&v1, &v2) << std::endl;
 	std::cout << "ThenMult: " << opThenMult.evaluate(&v1, &v2) << std::endl;
 	std::cout << "AggMax: " << opAggMax.evaluate(&v1, &v2) << std::endl;
-	std::cout << "AggPlus: " << opAggPlus.evaluate(&v1, &v2) << std::endl;
+	std::cout << "AggPlus: " << opAggPlus.evaluate(&v1, &v2) << std::endl << std::endl;
+
+	std::cout << "NotMinus1: " << opNotMinus1.evaluate(&v1) << std::endl;
 
 	std::cin.ignore();
 

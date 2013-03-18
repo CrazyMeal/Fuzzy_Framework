@@ -1,7 +1,7 @@
 #ifndef NOT_H
 #define NOT_H
 
-#include "../core/Expression.h"
+#include "../core/UnaryExpression.h"
 
 namespace fuzzy
 {
