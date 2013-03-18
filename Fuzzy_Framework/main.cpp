@@ -25,7 +25,6 @@ void main(){
 	fuzzy::NotMinus1<float> opNotMinus1;
 	fuzzy::IsTriangle<float> opIsTriangle(0.2, 0.4, 0.7);
 
-
 	core::ValueModel<float> v1(8);
 	core::ValueModel<float> v2(4);
 
