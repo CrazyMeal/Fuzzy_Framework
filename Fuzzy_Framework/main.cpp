@@ -9,6 +9,7 @@
 #include "fuzzy\AggPlus.h"
 #include "fuzzy\NotMinus1.h"
 #include "fuzzy\IsTriangle.h"
+#include "core\Factory.h"
 
 #include <iostream>
 
@@ -23,13 +24,13 @@ void main(){
 	fuzzy::AggMax<float> opAggMax;
 	fuzzy::AggPlus<float> opAggPlus;
 	fuzzy::NotMinus1<float> opNotMinus1;
-	fuzzy::IsTriangle<float> opIsTriangle(0.2, 0.4, 0.7);
+	fuzzy::IsTriangle<float> opIsTriangle(0.2f, 0.4f, 0.7f);
 
-	core::ValueModel<float> v1(8.0);
-	core::ValueModel<float> v2(4.0);
+	core::ValueModel<float> v1(8.f);
+	core::ValueModel<float> v2(4.f);
 
-	core::ValueModel<float> v3(0.3);
-	core::ValueModel<float> v4(0.5);
+	core::ValueModel<float> v3(0.3f);
+	core::ValueModel<float> v4(0.5f);
 
 	std::cout << "premiere valeur: " << v1.evaluate() << std::endl;
 	std::cout << "deuxieme valeur: " << v2.evaluate() << std::endl << std::endl;

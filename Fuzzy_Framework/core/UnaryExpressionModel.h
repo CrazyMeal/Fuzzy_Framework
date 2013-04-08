@@ -1,6 +1,8 @@
 #ifndef UNARYEXPRESSIONMODEL_H
 #define UNARYEXPRESSIONMODEL_H
 
+#include "Expression.h"
+
 namespace core
 {
 	template <class T>
@@ -21,7 +23,7 @@ namespace core
 	}
 
 	template <class T>
-	T UnaryExpressionModel<T>::evaluate()
+	T UnaryExpressionModel<T>::evaluate()const
 	{
 		if(operand != null)
 			return evaluate(operand);

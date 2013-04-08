@@ -1,6 +1,7 @@
 #ifndef BINARYEXPRESSIONMODEL_H
 #define BINARYEXPRESSIONMODEL_H
 
+#include "BinaryExpression.h"
 
 namespace core
 {
@@ -20,14 +21,14 @@ namespace core
 	};
 
 	template <class T>
-	T BinaryExpressionModel<T>::evaluate()
+	T BinaryExpressionModel<T>::evaluate() const
 	{
 		if (left != null && right != null)
 			return evaluate(left, right);
 	}
 
 	template <class T>
-	T BinaryExpressionModel<T>::evaluate(Expression<T>* _left, Expression<T>* _right)
+	T BinaryExpressionModel<T>::evaluate(Expression<T>* _left, Expression<T>* _right) const
 	{
 		if (ope != null)
 			return ope.evaluate(_left, _right);
