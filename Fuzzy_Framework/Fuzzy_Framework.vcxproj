@@ -63,6 +63,7 @@
     <ClInclude Include="core\BinaryExpression.h" />
     <ClInclude Include="core\BinaryExpressionModel.h" />
     <ClInclude Include="core\Expression.h" />
+    <ClInclude Include="core\Factory.h" />
     <ClInclude Include="core\UnaryExpression.h" />
     <ClInclude Include="core\UnaryExpressionModel.h" />
     <ClInclude Include="core\ValueModel.h" />
@@ -73,6 +74,7 @@
     <ClInclude Include="fuzzy\AndMin.h" />
     <ClInclude Include="fuzzy\AndMult.h" />
     <ClInclude Include="fuzzy\Is.h" />
+    <ClInclude Include="fuzzy\IsTrapeze.h" />
     <ClInclude Include="fuzzy\IsTriangle.h" />
     <ClInclude Include="fuzzy\Not.h" />
     <ClInclude Include="fuzzy\NotMinus1.h" />

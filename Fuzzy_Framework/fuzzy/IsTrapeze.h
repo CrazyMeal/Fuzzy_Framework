@@ -29,11 +29,11 @@ namespace fuzzy
 		T value = o->evaluate();
 
 		if(value > min && value < mid1)
-			return (value - min) / (mid - min);
+			return (value - min) / (mid1 - min);
 		if (value > mid1 && value < mid2)
 			return 1;
 		if(value > mid2 && value < max)
-			return (max - value) / (max - mid);
+			return (max - value) / (max - mid2);
 		
 		return 0;
 	}
