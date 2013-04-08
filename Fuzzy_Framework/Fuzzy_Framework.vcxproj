@@ -64,6 +64,7 @@
     <ClInclude Include="core\BinaryExpressionModel.h" />
     <ClInclude Include="core\Expression.h" />
     <ClInclude Include="core\Factory.h" />
+    <ClInclude Include="core\FuzzyFactory.h" />
     <ClInclude Include="core\UnaryExpression.h" />
     <ClInclude Include="core\UnaryExpressionModel.h" />
     <ClInclude Include="core\ValueModel.h" />

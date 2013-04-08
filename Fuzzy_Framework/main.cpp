@@ -10,6 +10,7 @@
 #include "fuzzy\NotMinus1.h"
 #include "fuzzy\IsTriangle.h"
 #include "core\Factory.h"
+#include "core\FuzzyFactory.h"
 
 #include <iostream>
 
